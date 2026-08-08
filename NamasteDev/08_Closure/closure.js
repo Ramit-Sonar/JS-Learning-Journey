@@ -1,4 +1,3 @@
-/*
 function x() {
     let a = 10;
 
@@ -12,7 +11,6 @@ console.log(b);
 
 b();//it print 10 because while returning y also return closure(fuction along with lexical enviroment) so y remembers where i came from, this all possible due to the closure 
 
-*/
 
 //real example --> counter
 
