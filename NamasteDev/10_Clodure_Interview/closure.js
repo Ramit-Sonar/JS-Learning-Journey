@@ -63,3 +63,19 @@ counter2.decrementCounter();
 counter2.decrementCounter();
 counter2.decrementCounter();
 counter2.decrementCounter();
+
+
+//disadvantage of closure, relation between garbage collector and closure
+
+function a () {
+    var x = 0, z = 10;//here z is garbage collection which is no longer use in program and it automatically removed by garbage collector
+
+    return function b(){
+        console.log(x);
+    }
+}
+
+var y = a()
+y();
+
+//Closure can increase memory usage because the inner function retains access to variables from its outer function even after the outer function has finished execution.
