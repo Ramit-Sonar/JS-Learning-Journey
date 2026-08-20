@@ -86,7 +86,7 @@ const Diameter = function (radious) {
     return 2 * radious;
 }
 
-function calculate (radious, logic) {//higher ordedr function
+const calculate = function(radious, logic) {//higher ordedr function
     const output = [];
     for(let i = 0; i < radious.length; i++){
         output.push(logic(radious[i]))
@@ -103,5 +103,17 @@ console.log("Modular area:", calculate(radious,Diameter));//this is the best pra
 
 console.log(radious.map(area)); // this is exactly same as our calculate function 
 
+
+//do you want to make calculate class same as map function? let make
+
+Array.prototype.calculate1 = function (logic) {//higher ordedr function
+    const output = [];
+    for(let i = 0; i < this.length; i++){
+        output.push(logic(this[i]))
+    }
+    return output;
+}
+
+console.log(radious.calculate1(area));// you can see we call this function as map
 
 
